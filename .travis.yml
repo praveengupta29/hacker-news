@@ -23,4 +23,4 @@ deploy:
   local_dir: build
   keep_history: true
   on:
-    branch: master
+    branch: $BUILD_BRANCH

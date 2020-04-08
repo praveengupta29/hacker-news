@@ -1,26 +1,21 @@
 language: node_js
-
 node_js:
-  - 'node'
-
+  - node
 script:
   - npm run lint:js
   - npm run lint:scss
   - npm run build
-
 notifications:
   email:
     on_failure: change
-
 cache:
   directories:
     - node_modules
-
 deploy:
-  provider: pages
+  provider: heroku
+  api_key:
+    secure: MVoIsQP+y8Fs7a3cTGu7Lql2YOhyVY2d/EPVbBzV9oolPpUhLcNTAm65/k83dprZHPc52tERbSHb3pCDod2Bjho1jwR91ITlT3EYthikg6FHzFJXtN/IpRjvr44QcnLgAF2eZJZgvXMuT9a42lv7quEm/fRZKADOsHAJiIqgYu53VVspaUEG1n+V1tMyazl/x9LKsDBwU2olXoTx8qpPRhkjbNFkbhCLvNDL+8ZWdswRm7P7l1vEOYlzx6r/chSsFk8l5T9sFrQhYPRE0yLN2Fo07jlqWDokzeXIm02uzWqvWR0LXmgiRpD0UBPvClQik2s92qffbjv2ipO9Ye6PEEvz/vHqhghEq6dezI7U84Ze82J6j0oybgR77W/BsfiAIPQheVWrdpRTGrUoRhGNeowPrJgqVggOEeyj4rip/cw7jSWcTuOIvArxhdIvbNk824TukqlC9t9wS2YvA1DR09Jh5sSI4nWPN1/+GygPM0kFE5XI+vVKeXyxQRaXXrBdYcTIAbpzoj5AiM0nhyl9J0SQeCdju5QlEBBtnyQywMcz/HU0pb3tmEhlujdrC+XZE+Rz93rC+iNeVF5eXZFOycL5nwhQBTCy67UNMZl7EpjGQ/y/dJZf6VLbmMx+6JrRSrJT3k9tdUH05qMMsrx7nLCcdyDV/CKpzFjjBQIVUYc=
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: build
-  keep_history: true
+  app: ps-hacker-news
   on:
-    branch: $BUILD_BRANCH
+    all_branches: true

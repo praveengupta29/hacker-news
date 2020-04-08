@@ -11,6 +11,8 @@ notifications:
 cache:
   directories:
     - node_modules
+before_deploy:
+  - cd ./build
 deploy:
   provider: heroku
   api_key:

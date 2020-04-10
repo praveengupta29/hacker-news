@@ -13,6 +13,7 @@
     "axios": "^0.19.2",
     "es6-promise": "^4.2.8",
     "history": "^4.10.1",
+    "ignore-styles": "^5.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",

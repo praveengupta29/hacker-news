@@ -39,9 +39,7 @@ export function* loadFeedListSaga(action) {
 
     const listingData = yield call(ServiceUtil.fetch, url);
 
-    const filteredData = filterFeedDataWithHiddenFeeds(listingData);
-
-    yield put(fetchFeedListDataSuccess(filteredData));
+    yield put(fetchFeedListDataSuccess(listingData));
 
     updateQueryParams(params);
   } catch (err) {

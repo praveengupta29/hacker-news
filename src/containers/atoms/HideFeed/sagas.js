@@ -1,3 +1,4 @@
+/* eslint-disable require-yield */
 import { takeLatest } from 'redux-saga/effects';
 
 import { HIDE_FEED, HIDE_FEED_KEY } from './constants';

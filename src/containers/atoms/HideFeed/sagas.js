@@ -11,7 +11,7 @@ export function* saveHideFeedSaga(action) {
 
   storage.saveItemInArray(HIDE_FEED_KEY, objectId);
 
-  // Here, a API request can be made to hide feed
+  // Here, an API request can be made to hide feed
 }
 
 export default function* hideFeedSaga() {

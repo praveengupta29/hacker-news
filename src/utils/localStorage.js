@@ -29,8 +29,9 @@ export class LocalStorageUtil {
    * @description - Save Value against key into localStorage
    */
   saveItem = (key, value) => {
-    // eslint-disable-next-line no-unused-expressions
-    isStorageUsable() && this.storage.setItem(key, value);
+    if (isStorageUsable()) {
+      this.storage.setItem(key, value);
+    }
   };
 
   /**
@@ -39,8 +40,9 @@ export class LocalStorageUtil {
    * @description - Remove `Key Value Pair` from localStorage
    */
   removeItem = key => {
-    // eslint-disable-next-line no-unused-expressions
-    isStorageUsable() && this.storage.removeItem(key);
+    if (isStorageUsable()) {
+      this.storage.removeItem(key);
+    }
   };
 
   /**
@@ -53,6 +55,19 @@ export class LocalStorageUtil {
     const feedIds = JSON.parse(this.getItem(key) || '[]');
     feedIds.push(value);
     this.saveItem(key, JSON.stringify(feedIds));
+  };
+
+  /**
+   *
+   * @param { string } key - Key Name
+   * @param { string } value - Key Value
+   * @description - Removes Value from Array against key into localStorage
+   */
+  removeItemFromArray = (key, value) => {
+    const items = JSON.parse(this.getItem(key) || '[]');
+    const itemIndex = items.findIndex(item => item === value);
+    items.splice(itemIndex, 1);
+    this.saveItem(key, JSON.stringify(items));
   };
 }
 

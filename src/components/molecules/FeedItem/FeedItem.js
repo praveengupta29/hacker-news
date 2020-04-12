@@ -1,10 +1,11 @@
 import React from 'react';
 
 import './FeedItem.scss';
-import Anchor from '../../atoms/Anchor';
 import { extractDomainFromUrl } from '../../../commons/utils/url';
 import timeSince from '../../../utils/timeSince';
+
 import HideFeed from '../../../containers/atoms/HideFeed/HideFeed';
+import Vote from '../../../containers/atoms/Vote/Vote';
 
 const getWebsiteName = url => {
   const domain = extractDomainFromUrl(url);
@@ -25,6 +26,7 @@ const FeedItem = ({ ...others }) => {
     points,
     title,
     url,
+    voted,
   } = others;
   return (
     <div className="feed-item flex align-center">
@@ -34,14 +36,7 @@ const FeedItem = ({ ...others }) => {
         <div className="points flex">
           {points}
 
-          <Anchor
-            handleLinkClick={e => {
-              e.preventDefault();
-            }}
-            className="up-vote-link"
-          >
-            <div className="up-vote-arrow" />
-          </Anchor>
+          {!voted && <Vote objectId={objectID} />}
         </div>
       </div>
 
@@ -59,6 +54,8 @@ const FeedItem = ({ ...others }) => {
           <span className="time-since secondary-color">
             {timeSince(timestampInSeconds)}
           </span>
+
+          {voted && <Vote objectId={objectID} voted={voted} />}
 
           <span className="bracket secondary-color">[</span>
 

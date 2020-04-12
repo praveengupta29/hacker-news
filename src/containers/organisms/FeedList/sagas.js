@@ -46,6 +46,6 @@ export function* loadFeedListSaga(action) {
   }
 }
 
-export default function* flightListingSaga() {
+export default function* feedListSaga() {
   yield takeLatest(FETCH_FEED_LIST_DATA, loadFeedListSaga);
 }

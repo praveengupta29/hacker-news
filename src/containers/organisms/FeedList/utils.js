@@ -1,5 +1,6 @@
 import { LocalStorageUtil } from '../../../utils/localStorage';
 import { HIDE_FEED_KEY } from '../../atoms/HideFeed/constants';
+import { VOTE_FEED_KEY } from '../../atoms/Vote/constants';
 
 export const removeFeed = (feedListState, objectID) => {
   const { data, ...others } = feedListState;
@@ -34,6 +35,31 @@ export const filterFeedDataWithHiddenFeeds = feedListData => {
     return {
       ...feedListData,
       hits: filteredHits,
+    };
+  }
+  return feedListData;
+};
+
+export const updateUpVoteInFeedData = feedListData => {
+  const storage = new LocalStorageUtil();
+
+  const votedFeedIds = JSON.parse(storage.getItem(VOTE_FEED_KEY) || '[]');
+
+  if (votedFeedIds.length) {
+    const { hits } = feedListData;
+    const votedHits = hits.map(hit => {
+      const cloneHit = { ...hit };
+
+      if (votedFeedIds.indexOf(cloneHit.objectID) > -1) {
+        cloneHit.voted = true;
+      }
+
+      return cloneHit;
+    });
+
+    return {
+      ...feedListData,
+      hits: votedHits,
     };
   }
   return feedListData;

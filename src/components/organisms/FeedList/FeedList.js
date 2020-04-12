@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import FeedItem from '../../molecules/FeedItem';
 
@@ -8,10 +8,7 @@ import {
 } from '../../../containers/organisms/FeedList/utils';
 import './FeedList.scss';
 
-const FeedList = ({ feedListData, fetchFeedListData }) => {
-  useEffect(() => {
-    fetchFeedListData();
-  }, []);
+const FeedList = ({ feedListData }) => {
   const filteredData = filterFeedDataWithHiddenFeeds(feedListData);
   const votedData = updateUpVoteInFeedData(filteredData);
 

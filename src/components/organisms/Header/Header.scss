@@ -1,0 +1,10 @@
+@import '../../../styles/utils/colors';
+
+.header {
+  background-color: $orange;
+  padding: 2px;
+
+  .logo {
+    border: 1px solid $white;
+  }
+}

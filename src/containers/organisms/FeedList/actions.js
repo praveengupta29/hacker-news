@@ -4,8 +4,9 @@ import {
   FETCH_FEED_LIST_DATA_ERROR,
 } from './constants';
 
-export const fetchFeedListData = () => ({
+export const fetchFeedListData = params => ({
   type: FETCH_FEED_LIST_DATA,
+  params,
 });
 
 export const fetchFeedListDataSuccess = data => ({

@@ -3,16 +3,16 @@ import { renderToString } from 'react-dom/server';
 
 import { Provider } from 'react-redux';
 import configureStore from '../src/store';
-import FeedList from '../src/containers/organisms/FeedList/FeedList';
+import FeedsWrapper from '../src/components/organisms/FeedsWrapper/FeedsWrapper';
 
 module.exports = function render(initialState) {
   // Configure the store with the initial state provided
   const store = configureStore(initialState);
 
   // render the App store static markup ins content variable
-  let content = renderToString(
+  const content = renderToString(
     <Provider store={store}>
-      <FeedList />
+      <FeedsWrapper />
     </Provider>,
   );
 

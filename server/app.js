@@ -7,7 +7,7 @@ import { INTERNAL_SERVER_ERROR } from './constants';
 
 import initialState from './initialState';
 import ServiceUtil from '../src/commons/utils/ServiceUtil';
-import { buildUrl } from '../src/commons/utils/utils';
+import { buildUrl } from '../src/commons/utils/url';
 import { FRONT_PAGE_TAG } from '../src/commons/constants';
 import apis from '../src/commons/constants/api.services';
 
@@ -39,10 +39,12 @@ app.listen(PORT, () => {
 
 // server renders home page
 app.get('/', (req, res) => {
+  const params = req.query || {};
   const url = buildUrl({
     pathName: apis.search,
     query: {
       tags: FRONT_PAGE_TAG,
+      ...params,
     },
   });
 

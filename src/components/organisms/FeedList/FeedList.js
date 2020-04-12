@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import FeedItem from '../../molecules/FeedItem';
 
-const FeedList = ({ feedListData }) => {
+import './FeedList.scss';
+
+const FeedList = ({ feedListData, fetchFeedListData }) => {
+  useEffect(() => {
+    fetchFeedListData();
+  }, []);
   const { hits: feedList } = feedListData;
 
-  return feedList.map(feed => {
-    return <FeedItem {...feed} />;
-  });
+  return (
+    <div className="feed-list-container">
+      {feedList.map(feed => {
+        const { created_at_i: timestamp } = feed;
+
+        return <FeedItem {...feed} key={timestamp} />;
+      })}
+    </div>
+  );
 };
 
 FeedList.propTypes = {

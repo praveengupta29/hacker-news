@@ -36,3 +36,12 @@ export const buildUrl = options => {
 
   return options;
 };
+
+export const extractDomainFromUrl = (url = '') => {
+  const nonEmptyUrl = url || '';
+  const urlParts = nonEmptyUrl
+    .replace('http://', '')
+    .replace('https://', '')
+    .split(/[/?#]/);
+  return urlParts[0];
+};

@@ -4,7 +4,10 @@ import {
   FETCH_FEED_LIST_DATA_ERROR,
 } from './constants';
 
+import { HIDE_FEED } from '../../atoms/HideFeed/constants';
+
 import feedListInitialState from '../../../commons/initialState/feedList.state';
+import { removeFeed } from './utils';
 
 const initialState = feedListInitialState;
 
@@ -29,6 +32,9 @@ const feedListReducer = (state = initialState, { type, data, error }) => {
         isFetching: false,
         error,
       };
+
+    case HIDE_FEED:
+      return removeFeed(state, data);
 
     default:
       return state;

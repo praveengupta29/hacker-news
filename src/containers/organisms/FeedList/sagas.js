@@ -10,7 +10,6 @@ import apis from '../../../commons/constants/api.services';
 
 import ServiceUtil from '../../../commons/utils/ServiceUtil';
 import { buildUrl } from '../../../commons/utils/url';
-import { filterFeedDataWithHiddenFeeds } from './utils';
 
 const updateQueryParams = params => {
   if (history && Object.keys(params).indexOf('page') > -1) {

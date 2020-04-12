@@ -26,7 +26,7 @@ Anchor.defaultProps = {
   className: '',
   target: '_self',
   handleLinkClick: () => {},
-  to: '#',
+  to: '',
 };
 
 Anchor.propTypes = {

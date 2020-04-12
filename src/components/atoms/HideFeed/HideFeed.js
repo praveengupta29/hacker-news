@@ -8,7 +8,8 @@ const HideFeed = ({ hideFeed, objectId }) => {
   return (
     <Anchor
       className="hide-btn"
-      handleLinkClick={() => {
+      handleLinkClick={e => {
+        e.preventDefault();
         hideFeed(objectId);
       }}
     >

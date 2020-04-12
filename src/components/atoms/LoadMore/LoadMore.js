@@ -14,7 +14,8 @@ const LoadMore = ({ currentPage, fetchFeedListData, totalPages }) => {
     isVisible(cp, totalPages) && (
       <div className="load-more sm-text-center md-text-initial">
         <Anchor
-          handleLinkClick={() => {
+          handleLinkClick={e => {
+            e.preventDefault();
             fetchFeedListData({ page: cp });
           }}
           className="load-more-link"

@@ -34,7 +34,12 @@ const FeedItem = ({ ...others }) => {
         <div className="points flex">
           {points}
 
-          <Anchor handleLinkClick={() => {}} className="up-vote-link">
+          <Anchor
+            handleLinkClick={e => {
+              e.preventDefault();
+            }}
+            className="up-vote-link"
+          >
             <div className="up-vote-arrow" />
           </Anchor>
         </div>

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UnVote component should render correctly with \`UnVote\` and match snapshot 1`] = `
+<UpVote
+  objectId="6382672"
+  voteFeed={[Function]}
+/>
+`;
+
+exports[`UnVote component should render correctly with \`UpVote\` and match snapshot 1`] = `
+<UnVote
+  objectId="6382672"
+  voteFeed={[Function]}
+/>
+`;

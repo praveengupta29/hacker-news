@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component should render correctly and match snapshot 1`] = `
+<div
+  className="header flex"
+>
+  <Anchor
+    className=""
+    handleLinkClick={[Function]}
+    target="_self"
+    to="/"
+  >
+    <Image
+      alt="logo"
+      className="logo"
+      height="18"
+      sizes=""
+      src="/images/logo.png"
+      srcset=""
+      width="18"
+    />
+  </Anchor>
+  <Navigation />
+</div>
+`;

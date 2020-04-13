@@ -1,0 +1,11 @@
+@import '../../../styles/utils/breakpoints';
+@import '../../../styles/utils/colors';
+
+.feeds-wrapper {
+  background-color: $bg-color;
+  margin: 0 auto;
+}
+
+.feed-list-load-more-container {
+  padding: 24px 0;
+}

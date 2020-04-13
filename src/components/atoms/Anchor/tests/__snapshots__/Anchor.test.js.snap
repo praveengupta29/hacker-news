@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Anchor Component should render correctly and match snapshot 1`] = `
+<a
+  className=""
+  href="/"
+  onClick={[Function]}
+  target="_self"
+>
+  Sample
+</a>
+`;
+
+exports[`Anchor Component should render correctly and match snapshot with object destination 1`] = `
+<a
+  className=""
+  href="undefined?a=1&b=2"
+  onClick={[Function]}
+  target="_self"
+>
+  Sample
+</a>
+`;
+
+exports[`Anchor Component should render correctly and match snapshot with object destination and no query param 1`] = `
+<a
+  className=""
+  onClick={[Function]}
+  target="_self"
+>
+  Sample
+</a>
+`;

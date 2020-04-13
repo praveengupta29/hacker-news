@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeedItem component should render correctly with \`UnVote\` and match snapshot 1`] = `
+<div
+  className="feed-item flex align-center"
+>
+  <div
+    className="numeric-detail flex align-center"
+  >
+    <div
+      className="comments"
+    >
+      626
+    </div>
+    <div
+      className="points flex"
+    >
+      656
+    </div>
+  </div>
+  <div
+    className="text-details lg-flex align-center"
+  >
+    <div
+      className="main-details lg-flex align-center"
+    >
+      <div
+        className="title"
+      >
+        The cost of virtualizing CS conferences
+      </div>
+      <div
+        className="website-name secondary-color"
+      >
+        (
+        queue.acm.org
+        )
+      </div>
+    </div>
+    <div
+      className="other-details flex align-center"
+    >
+      <span
+        className="by-keyword secondary-color"
+      >
+        by
+      </span>
+      <span
+        className="author-name"
+      >
+        davidmakina
+      </span>
+      <span
+        className="time-since secondary-color"
+      >
+        about 14 hours ago
+      </span>
+      <Connect(Vote)
+        objectId="787666"
+        voted={true}
+      />
+      <span
+        className="bracket secondary-color"
+      >
+        [
+      </span>
+      <Connect(HideFeed)
+        objectId="787666"
+      />
+      <span
+        className="bracket secondary-color"
+      >
+        ]
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FeedItem component should render correctly with \`UpVote\` and match snapshot 1`] = `
+<div
+  className="feed-item flex align-center"
+>
+  <div
+    className="numeric-detail flex align-center"
+  >
+    <div
+      className="comments"
+    >
+      626
+    </div>
+    <div
+      className="points flex"
+    >
+      656
+      <Connect(Vote)
+        objectId="787666"
+      />
+    </div>
+  </div>
+  <div
+    className="text-details lg-flex align-center"
+  >
+    <div
+      className="main-details lg-flex align-center"
+    >
+      <div
+        className="title"
+      >
+        The cost of virtualizing CS conferences
+      </div>
+      <div
+        className="website-name secondary-color"
+      >
+        (
+        queue.acm.org
+        )
+      </div>
+    </div>
+    <div
+      className="other-details flex align-center"
+    >
+      <span
+        className="by-keyword secondary-color"
+      >
+        by
+      </span>
+      <span
+        className="author-name"
+      >
+        davidmakina
+      </span>
+      <span
+        className="time-since secondary-color"
+      >
+        about 14 hours ago
+      </span>
+      <span
+        className="bracket secondary-color"
+      >
+        [
+      </span>
+      <Connect(HideFeed)
+        objectId="787666"
+      />
+      <span
+        className="bracket secondary-color"
+      >
+        ]
+      </span>
+    </div>
+  </div>
+</div>
+`;

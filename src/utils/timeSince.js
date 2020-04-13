@@ -45,13 +45,14 @@ const getTemplate = ({ seconds, minutes, hours, days, years }) => {
 /**
  *
  * @param {Number} time - Timestamp in seconds
+ * @param {String | Object} sinceAgoDate
  * @returns {String} - e.g `4 hours aga`
  */
-const timeSince = time => {
+const timeSince = (time, sinceAgoDate = null) => {
   if (!time) return null;
 
   const timeUnits = {};
-  const now = new Date();
+  const now = sinceAgoDate ? new Date(sinceAgoDate) : new Date();
   timeUnits.seconds = now.getTime() * 0.001 - time;
   timeUnits.minutes = timeUnits.seconds / 60;
   timeUnits.hours = timeUnits.minutes / 60;

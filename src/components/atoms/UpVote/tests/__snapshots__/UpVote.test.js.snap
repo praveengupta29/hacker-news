@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UnVote component should render correctly and match snapshot 1`] = `
+<Anchor
+  className="up-vote-link"
+  handleLinkClick={[Function]}
+  target="_self"
+  to=""
+>
+  <div
+    className="up-vote-arrow"
+  />
+</Anchor>
+`;

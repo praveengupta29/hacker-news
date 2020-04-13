@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeedList component should render correctly and match snapshot 1`] = `
+<div
+  className="feed-list-container"
+>
+  <FeedItem
+    _highlightResult={
+      Object {
+        "author": Object {
+          "matchLevel": "none",
+          "matchedWords": Array [],
+          "value": "astdb",
+        },
+        "title": Object {
+          "matchLevel": "none",
+          "matchedWords": Array [],
+          "value": "Alan Kay: ““Maxwell’s Equations of Software ”“",
+        },
+        "url": Object {
+          "matchLevel": "none",
+          "matchedWords": Array [],
+          "value": "https://queue.acm.org/detail.cfm?id=1039523",
+        },
+      }
+    }
+    _tags={
+      Array [
+        "story",
+        "author_astdb",
+        "story_22847079",
+        "front_page",
+      ]
+    }
+    author="astdb"
+    comment_text={null}
+    created_at="2020-04-12T09:54:21.000Z"
+    created_at_i={1586685261}
+    key="1586685261"
+    num_comments={4}
+    objectID="22847079"
+    parent_id={null}
+    points={34}
+    story_id={null}
+    story_text={null}
+    story_title={null}
+    story_url={null}
+    title="Alan Kay: ““Maxwell’s Equations of Software ”“"
+    url="https://queue.acm.org/detail.cfm?id=1039523"
+  />
+  <FeedItem
+    _highlightResult={
+      Object {
+        "author": Object {
+          "matchLevel": "none",
+          "matchedWords": Array [],
+          "value": "kiyanwang",
+        },
+        "title": Object {
+          "matchLevel": "none",
+          "matchedWords": Array [],
+          "value": "Technology-budgeting/handbook.md at master · 18F/technology-budgeting",
+        },
+        "url": Object {
+          "matchLevel": "none",
+          "matchedWords": Array [],
+          "value": "https://github.com/18F/technology-budgeting/blob/master/handbook.md",
+        },
+      }
+    }
+    _tags={
+      Array [
+        "story",
+        "author_kiyanwang",
+        "story_22847877",
+        "front_page",
+      ]
+    }
+    author="kiyanwang"
+    comment_text={null}
+    created_at="2020-04-12T12:44:02.000Z"
+    created_at_i={1586695442}
+    key="1586695442"
+    num_comments={4}
+    objectID="22847877"
+    parent_id={null}
+    points={27}
+    story_id={null}
+    story_text={null}
+    story_title={null}
+    story_url={null}
+    title="Technology-budgeting/handbook.md at master · 18F/technology-budgeting"
+    url="https://github.com/18F/technology-budgeting/blob/master/handbook.md"
+  />
+</div>
+`;

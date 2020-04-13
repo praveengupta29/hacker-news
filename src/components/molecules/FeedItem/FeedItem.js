@@ -25,6 +25,7 @@ const FeedItem = ({ ...others }) => {
     objectID,
     points,
     title,
+    sinceAgoDate,
     url,
     voted,
   } = others;
@@ -52,7 +53,7 @@ const FeedItem = ({ ...others }) => {
           <span className="author-name">{author}</span>
 
           <span className="time-since secondary-color">
-            {timeSince(timestampInSeconds)}
+            {timeSince(timestampInSeconds, sinceAgoDate)}
           </span>
 
           {voted && <Vote objectId={objectID} voted={voted} />}
